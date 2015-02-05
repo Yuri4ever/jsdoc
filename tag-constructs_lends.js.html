@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: tag-enum.js</title>
+    <title>JSDoc: Source: tag-constructs_lends.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: tag-enum.js</h1>
+    <h1 class="page-title">Source: tag-constructs_lends.js</h1>
 
     
 
@@ -27,28 +27,33 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>/**
- * @file 示例@enum
+ * @file 示例@construct、@lends
  */
 
-/**
- * @enum {number}
- * @desc cgi常见的返回码
- */
-var retcode = {
+function createClass(name, ctor, proto) {
+    function newClass() {
+        ctor.apply(this, arguments);
+    }
+
+    newClass.prototype = Object.create(proto);
+
+    return newClass;
+}
+
+makeClass('Class9',
     /**
-     * @desc 未登录
+     * @constructs Class9
      */
-    NOT_LOGIN: 100000,
-    /**
-     * @desc 参数错误
+    function () {},
+    /** 
+     * @lends Class9.prototype
      */
-    PARAM_ERROR: 100001,
-    /**
-     * @type {string}
-     * @desc 未知错误
-     */
-    UNKOWN_ERROR: 'unkown'
-}</code></pre>
+    {
+        a: function () {
+            return 'a';
+        }
+    }
+);</code></pre>
         </article>
     </section>
 

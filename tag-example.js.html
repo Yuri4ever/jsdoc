@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: tag-enum.js</title>
+    <title>JSDoc: Source: tag-example.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: tag-enum.js</h1>
+    <h1 class="page-title">Source: tag-example.js</h1>
 
     
 
@@ -27,27 +27,20 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>/**
- * @file 示例@enum
+ * @file 示例@example
  */
 
 /**
- * @enum {number}
- * @desc cgi常见的返回码
+ * @func func10
+ * @desc 计算两个数值的和
+ * @param {number} a - 加数a
+ * @param {number} b - 加数b
+ * @returns {number} 返回a和b的和
+ * @example
+ * func10(1, 2);    // 返回3
  */
-var retcode = {
-    /**
-     * @desc 未登录
-     */
-    NOT_LOGIN: 100000,
-    /**
-     * @desc 参数错误
-     */
-    PARAM_ERROR: 100001,
-    /**
-     * @type {string}
-     * @desc 未知错误
-     */
-    UNKOWN_ERROR: 'unkown'
+function func10(a, b) {
+    return a + b;
 }</code></pre>
         </article>
     </section>

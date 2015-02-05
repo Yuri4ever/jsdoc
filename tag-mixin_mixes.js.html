@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: tag-enum.js</title>
+    <title>JSDoc: Source: tag-mixin_mixes.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: tag-enum.js</h1>
+    <h1 class="page-title">Source: tag-mixin_mixes.js</h1>
 
     
 
@@ -27,28 +27,30 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>/**
- * @file 示例@enum
+ * @file 示例@interface、@implements
  */
 
 /**
- * @enum {number}
- * @desc cgi常见的返回码
+ * @mixin var16
+ * @property {string} a - 属性a
+ * @property {function} b - 属性b
  */
-var retcode = {
-    /**
-     * @desc 未登录
-     */
-    NOT_LOGIN: 100000,
-    /**
-     * @desc 参数错误
-     */
-    PARAM_ERROR: 100001,
-    /**
-     * @type {string}
-     * @desc 未知错误
-     */
-    UNKOWN_ERROR: 'unkown'
-}</code></pre>
+var var16 = {
+    a: 'a',
+    b: function () {
+        return 'b';
+    }
+}
+
+/**
+ * @var {object} var17
+ * @property {string} c - 属性c
+ * @mixes var16
+ */
+var var17 = {
+    c: 'c'
+}
+</code></pre>
         </article>
     </section>
 

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: tag-enum.js</title>
+    <title>JSDoc: Source: tag-interface_implements.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: tag-enum.js</h1>
+    <h1 class="page-title">Source: tag-interface_implements.js</h1>
 
     
 
@@ -27,27 +27,31 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>/**
- * @file 示例@enum
+ * @file 示例@interface、@implements
  */
 
 /**
- * @enum {number}
- * @desc cgi常见的返回码
+ * @interface interface1
  */
-var retcode = {
+var interface1 = {
     /**
-     * @desc 未登录
+     * @method interface1.a
+     * @param {string} b - 参数b
+     * @returns {string} 返回值
      */
-    NOT_LOGIN: 100000,
-    /**
-     * @desc 参数错误
-     */
-    PARAM_ERROR: 100001,
-    /**
-     * @type {string}
-     * @desc 未知错误
-     */
-    UNKOWN_ERROR: 'unkown'
+    a: function (b) {
+        return 'a';
+    }
+}
+
+/**
+ * @class Class8
+ * @implements {interface1}
+ */
+function Class8() {}
+
+Class8.prototype.a = function (b) {
+    return true;
 }</code></pre>
         </article>
     </section>

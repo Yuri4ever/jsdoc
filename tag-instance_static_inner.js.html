@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: tag-enum.js</title>
+    <title>JSDoc: Source: tag-instance_static_inner.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: tag-enum.js</h1>
+    <h1 class="page-title">Source: tag-instance_static_inner.js</h1>
 
     
 
@@ -27,28 +27,31 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>/**
- * @file 示例@enum
+ * @file 示例@instance、@static、@inner
  */
 
 /**
- * @enum {number}
- * @desc cgi常见的返回码
+ * @class Class7
  */
-var retcode = {
+function Class7() {
     /**
-     * @desc 未登录
+     * @member {string} Class7#a
+     * @instance
      */
-    NOT_LOGIN: 100000,
+    this.a = 'a';
+
     /**
-     * @desc 参数错误
+     * @func Class7~c
+     * @inner
      */
-    PARAM_ERROR: 100001,
-    /**
-     * @type {string}
-     * @desc 未知错误
-     */
-    UNKOWN_ERROR: 'unkown'
-}</code></pre>
+    function c() {}
+}
+
+/**
+ * @member {string} Class7.b
+ * @static
+ */
+Class7.b = 'b';</code></pre>
         </article>
     </section>
 

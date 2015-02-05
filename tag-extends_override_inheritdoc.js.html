@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: tag-enum.js</title>
+    <title>JSDoc: Source: tag-extends_override_inheritdoc.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: tag-enum.js</h1>
+    <h1 class="page-title">Source: tag-extends_override_inheritdoc.js</h1>
 
     
 
@@ -27,28 +27,30 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>/**
- * @file 示例@enum
+ * @file 示例@extends、@override、@inheritdoc
  */
 
 /**
- * @enum {number}
- * @desc cgi常见的返回码
+ * @class Class6
+ * @extends Class5
+ * @classdesc Class6是继承Class5的
  */
-var retcode = {
-    /**
-     * @desc 未登录
-     */
-    NOT_LOGIN: 100000,
-    /**
-     * @desc 参数错误
-     */
-    PARAM_ERROR: 100001,
-    /**
-     * @type {string}
-     * @desc 未知错误
-     */
-    UNKOWN_ERROR: 'unkown'
-}</code></pre>
+function Class6() {}
+
+/**
+ * @override
+ * @returns {boolean} 返回值
+ */
+Class6.prototype.a = function () {
+    return true;
+};
+
+/**
+ * @inheritdoc
+ */
+Class6.prototype.b = function (c) {
+    return false;
+};</code></pre>
         </article>
     </section>
 

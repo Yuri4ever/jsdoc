@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: tag-enum.js</title>
+    <title>JSDoc: Source: tag-global.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: tag-enum.js</h1>
+    <h1 class="page-title">Source: tag-global.js</h1>
 
     
 
@@ -27,28 +27,18 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>/**
- * @file 示例@enum
+ * @file 示例@global
  */
 
-/**
- * @enum {number}
- * @desc cgi常见的返回码
- */
-var retcode = {
-    /**
-     * @desc 未登录
-     */
-    NOT_LOGIN: 100000,
-    /**
-     * @desc 参数错误
-     */
-    PARAM_ERROR: 100001,
-    /**
+(function() {
+    /** 
      * @type {string}
-     * @desc 未知错误
+     * @global
      */
-    UNKOWN_ERROR: 'unkown'
-}</code></pre>
+    var var14 = 'a';
+
+    this.var14 = var14;
+})(window);</code></pre>
         </article>
     </section>
 
