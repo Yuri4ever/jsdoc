@@ -1,0 +1,11 @@
+{
+  "name": "coupon",
+  "version": "0.0.1",
+  "author": "yussicahe",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "load-grunt-tasks": "~0.6.0",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-jsdoc": "~0.6.2"
+  }
+}
