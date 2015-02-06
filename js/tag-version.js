@@ -1,9 +1,9 @@
 /**
- * @file 测试@version
+ * @file 示例@version
  */
 
 /**
- * @func func5
+ * @func
  * @version 1.0
  */
  function func5() {}

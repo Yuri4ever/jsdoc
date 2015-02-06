@@ -1,14 +1,24 @@
 /**
- * @file 测试@abstract
+ * @file 示例@abstract
  */
 
 /**
- * @class Class5
+ * @class
  */
 function Class5() {}
 
 /**
  * @abstract
- * @method Class5#a
+ * @method
+ * @desc 子类需要重写这个方法
  */
 Class5.prototype.a = function () {};
+
+/**
+ * @method
+ * @param {string} c - 参数c
+ * @returns {boolean} 返回值
+ */
+Class5.prototype.b = function (c) {
+    return true;
+};

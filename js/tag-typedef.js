@@ -1,16 +1,15 @@
 /**
- * @file 测试@typedef
+ * @file 示例@typedef
  */
 
 /**
  * @typedef type1
- * @desc 自定义type1
- * @property {number} a - 属性a的描述
- * @property {string} b - 属性b的描述
+ * @desc 这是自定义的type
+ * @property {number} a - 属性a
+ * @property {string} b - 属性b
  */
 
 /**
  * @type type1
- * @desc 自定义type1
  */
 var var2;

@@ -1,10 +1,10 @@
 /**
- * @file 测试@enum
+ * @file 示例@enum
  */
 
 /**
  * @enum {number}
- * @desc cgi返回常见retcode
+ * @desc cgi常见的返回码
  */
 var retcode = {
     /**

@@ -1,5 +1,5 @@
 /**
- * @file 测试@type
+ * @file 示例@type
  */
 
 /**
@@ -40,7 +40,7 @@ var var10;
 /**
  * @type {object}
  * @desc 对象
- * @property {string} a - 属性a的描述
+ * @property {string} a - 属性a
  */
 var var11 = {
     a: 'a'

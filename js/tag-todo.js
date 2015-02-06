@@ -1,9 +1,9 @@
 /**
- * @file 测试@todo
+ * @file 示例@todo
  */
 
  /**
-  * @func func7
-  * @todo 待性能优化
+  * @func
+  * @todo 这个函数需要优化
   */
 function func7() {}

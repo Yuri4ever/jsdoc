@@ -1,9 +1,9 @@
 /**
- * @file 测试@deprecated
+ * @file 示例@deprecated
  */
 
 /**
-* @func func4
+* @func
 * @deprecated 已弃用
 */
 function func4() {}

@@ -1,9 +1,9 @@
 /**
- * @file 测试@param
+ * @file 示例@param
  */
 
 /**
- * @func func1
+ * @func
  * @desc 一个带参数的函数
  * @param {string} a - 参数a
  * @param {number} b=1 - 参数b默认值为1
@@ -19,7 +19,7 @@
 function func1(a, b, c, d, g, j) {}
 
 /**
- * @func func2
+ * @func
  * @desc 一个带若干参数的函数
  * @param {...string} a - 参数a
  */

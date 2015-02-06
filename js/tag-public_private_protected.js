@@ -1,25 +1,25 @@
 /**
- * @file 测试@public、@private、@protected
+ * @file 示例@public、@private、@protected
  */
 
 /**
- * @class Class4
+ * @class
  */
 function Class4() {
     /**
-     * @member {string} Class4#a
+     * @member {string}
      * @public
      */
     this.a = 'a';
 
     /**
-     * @member {string} Class4#b
+     * @member {string}
      * @private
      */
     this.b = 'b';
 
     /**
-     * @member {string} Class4#c
+     * @member {string}
      * @protected
      */
     this.c = 'c';

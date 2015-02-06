@@ -1,11 +1,11 @@
 /**
- * @file 测试@property
+ * @file 示例@property
  */
 
 /**
- * @var {object} var12
- * @property {string} a - 属性a的描述
- * @property {string} b - 属性b的描述
+ * @var {object}
+ * @property {string} a - 属性a
+ * @property {string} b - 属性b
  */
 var var12 = {
     a: 'a',

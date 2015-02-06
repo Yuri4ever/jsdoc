@@ -1,11 +1,11 @@
 /**
- * @file 测试@returns
+ * @file 示例@returns
  */
 
 /**
- * @func func3
- * @desc 一个有返回值函数
- * @returns {boolean} - 返回值的描述
+ * @func
+ * @desc 这是一个有返回值函数
+ * @returns {boolean} 返回值
  */
 function func3() {
     return true;

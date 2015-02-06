@@ -1,9 +1,9 @@
 /**
- * @file 测试@var
+ * @file 示例@var
  */
 
 /**
- * @var {string} var1
- * @desc 一个变量
+ * @var {string}
+ * @desc 这是一个变量
  */
 var var1;

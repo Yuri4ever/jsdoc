@@ -1,8 +1,9 @@
 /**
- * @file 测试@constant
+ * @file 示例@constant
  */
 
 /**
- * @constant {string} CONSTANT1
+ * @constant {string}
+ * @desc 这是一个常量
  */
 var CONSTANT1 = 'a';

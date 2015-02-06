@@ -1,5 +1,5 @@
 /**
- * @file 测试@readonly
+ * @file 示例@readonly
  */
 
 /**

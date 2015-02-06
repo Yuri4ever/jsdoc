@@ -1,16 +1,19 @@
 /**
- * @file 测试@alias
+ * @file 示例@alias
  */
 
-(function(NS1) {
-    /**
-     * @alias NS1.b
-     * @type {object}
-     * @property {string} c - 属性c
-     */
-    var b = {
-        c: 'c'
-    };
+/**
+ * @namespace
+ */
+var NS3 = {};
 
-    NS1.b = b;
-})(NS1);
+/**
+ * @alias NS3.b
+ * @type {object}
+ * @property {string} c - 属性c
+ */
+var b = {
+    c: 'c'
+};
+
+NS3.b = b;

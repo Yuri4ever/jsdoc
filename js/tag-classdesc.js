@@ -1,10 +1,10 @@
 /**
- * @file 测试@classdesc
+ * @file 示例@classdesc
  */
 
 /**
- * @class Class2
+ * @class
  * @classdesc 这是对Class2类的描述
- * @desc 这是对Class2构造函数的描述
+ * @desc 这是对Class2类的构造函数的描述
  */
 function Class2() {}

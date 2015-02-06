@@ -1,8 +1,8 @@
 /**
- * @file 测试@class
+ * @file 示例@class
  */
 
 /**
- * @class Class1
+ * @class
  */
 function Class1() {}

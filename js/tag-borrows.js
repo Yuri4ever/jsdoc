@@ -1,15 +1,12 @@
 /**
- * @file 测试@borrows
+ * @file 示例@borrows
  */
 
 /**
- * @namespace NS2
- * @desc 一个命名空间
+ * @namespace
+ * @desc 这是一个命名空间
+ * @borrows func1 as a
  */
 window.NS2 = {
-    /**
-     * @method NS2.a
-     * @borrows func1 as NS2.a
-     */
     a: func1
 }
