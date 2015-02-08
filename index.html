@@ -1,4178 +1,1427 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
+    <title>JSDoc Guide</title>
     <meta charset="utf-8">
-    <title>JSDoc: Home</title>
-
-    <script src="scripts/prettify/prettify.js"> </script>
-    <script src="scripts/prettify/lang-css.js"> </script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
-    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/tomorrow.min.css">
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul, ol {
+            list-style: none;
+        }
+        body {
+            color: rgb(42, 42, 42);
+            font-family: -apple-system-font, "Helvetica Neue", Helvetica, Microsoft Yahei, STHeiTi, sans-serif;
+        }
+        pre {
+            line-height: 1.5;
+        }
+        code {
+            font-family: "PT Mono", Menlo, "Courier New", monospace;
+        }
+        .hljs {
+            padding: 0;
+            background: transparent;
+        }
+        .side-bar {
+            position: fixed;
+            float: left;
+            border-right: 1px solid #d4b4ff;
+            padding: 0 16px;
+            width: 220px;
+            height: 100%;
+            background: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(0.92, transparent), color-stop(0.9201, rgba(212, 180, 255, 0.0)), to(rgba(212, 180, 255, 0.3))), #f3eaff;
+            box-shadow: 0 0 15px #d4b4ff;
+            overflow-y: auto;
+        }
+        .side-bar a {
+            color: rgb(90, 90, 90);
+            text-decoration: none;
+        }
+        .side-bar .header {
+            margin: 24px 0;
+            font-style: italic;
+            text-align: center;
+        }
+        .side-bar .header h2 {
+            margin-top: 10px;
+        }
+        .side-bar .header a {
+            color: #ff4522;
+        }
+        .side-bar .lists > div {
+            position: relative;
+            padding: 14px 0;
+        }
+        .side-bar .lists > div:after {
+            display: block;
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 1px;
+            background: -webkit-gradient(linear, left top, right top, from(rgba(165, 69, 243, 0.0)), color-stop(0.3, rgba(165, 69, 243, 0.33)), color-stop(0.7, rgba(165, 69, 243, 0.33)), to(rgba(165, 69, 243, 0.0)));
+        }
+        .side-bar .lists h2 {
+            font-size: 20px;
+            font-weight: normal;
+        }
+        .side-bar .lists ul {
+            margin-top: 9px;
+        }
+        .side-bar .lists li {
+            margin: 5px 0;
+            padding: 0 16px;
+            font-size: 18px;
+        }
+        .content {
+            margin-left: 252px;
+        }
+        .content .lists li {
+            position: relative;
+            display: table;
+            width: 100%;
+        }
+        .content .lists li:after {
+            display: block;
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 1px;
+            background: -webkit-gradient(linear, left top, right top, from(rgba(165, 69, 243, 0.0)), color-stop(0.15, rgb(223, 225, 232)), color-stop(1, rgb(223, 225, 232)));
+        }
+        .content .lists li:last-child:after{
+            display: none;
+        }
+        .content .lists li > * {
+            display: table-cell;
+            padding: 60px;
+            width: 50%;
+        }
+        .content .lists li .desc h3 {
+            font-size: 30px;
+            font-weight: normal;
+        }
+        .content .lists li .desc p{
+            margin-top: 10px;
+            font-size: 20px;
+            line-height: 1.5;
+            color: rgb(90, 90, 90);
+        }
+        .content .lists li .desc p.warn{
+            color: #cb2027;
+        }
+        .content .lists li .desc code{
+            background: rgb(247, 247, 249);
+        }
+        .content .lists li .code {
+            background: rgb(247, 247, 249);
+        }
+    </style>
 </head>
-
 <body>
-
-<div id="main">
-
-    <h1 class="page-title">Home</h1>
-
-    
-
-
-
-    
-
-
-    <h3> </h3>
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-<section>
-
-<header>
-    
-        <h2>
-        tag-abstract.js
-        </h2>
-        
-    
-</header>
-
-<article>
-    <div class="container-overview">
-    
-        
-            <div class="description">示例@abstract</div>
-        
-
-        
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="tag-abstract.js.html">tag-abstract.js</a>, <a href="tag-abstract.js.html#line1">line 1</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-        
-    
+    <div class="side-bar">
+        <div class="header">
+            <h1>JSDoc Guide</h1>
+            <h2><a href="doc/index.html" target="_blank">View Demo</a></h2>
+        </div>
+        <div class="lists">
+            <div>
+                <h2>常用</h2>
+                <ul>
+                    <li><a href="#@file">@file</a></li>
+                    <li><a href="#@author">@author</a></li>
+                    <li><a href="#@copyright">@copyright</a></li>
+                    <li><a href="#@license">@license</a></li>
+                    <li><a href="#@type">@type</a></li>
+                    <li><a href="#@var">@var</a></li>
+                    <li><a href="#@property">@property</a></li>
+                    <li><a href="#@func">@func</a></li>
+                    <li><a href="#@param">@param</a></li>
+                    <li><a href="#@returns">@returns</a></li>
+                    <li><a href="#@namespace">@namespace</a></li>
+                    <li><a href="#@desc">@desc</a></li>
+                    <li><a href="#@summary">@summary</a></li>
+                    <li><a href="#@constant">@constant</a></li>
+                    <li><a href="#@readonly">@readonly</a></li>
+                    <li><a href="#@default">@default</a></li>
+                    <li><a href="#@enum">@enum</a></li>
+                    <li><a href="#@example">@example</a></li>
+                    <li><a href="#@throws">@throws</a></li>
+                    <li><a href="#@todo">@todo</a></li>
+                    <li><a href="#@deprecated">@deprecated</a></li>
+                    <li><a href="#@borrows">@borrows</a></li>
+                    <li><a href="#@callback">@callback</a></li>
+                    <li><a href="#@typedef">@typedef</a></li>
+                    <li><a href="#@this">@this</a></li>
+                    <li><a href="#@global">@global</a></li>
+                    <li><a href="#@inner">@inner</a></li>
+                    <li><a href="#@ignore">@ignore</a></li>
+                    <li><a href="#@version">@version</a></li>
+                    <li><a href="#@since">@since</a></li>
+                </ul>
+            </div>
+            <div>
+                <h2>类相关</h2>
+                <ul>
+                    <li><a href="#@class">@class</a></li>
+                    <li><a href="#@classdesc">@classdesc</a></li>
+                    <li><a href="#@member">@member</a></li>
+                    <li><a href="#@method">@method</a></li>
+                    <li><a href="#@public">@public</a></li>
+                    <li><a href="#@private">@private</a></li>
+                    <li><a href="#@protected">@protected</a></li>
+                    <li><a href="#@instance">@instance</a></li>
+                    <li><a href="#@static">@static</a></li>
+                    <li><a href="#@constructs">@constructs</a></li>
+                    <li><a href="#@lends">@lends</a></li>
+                    <li><a href="#@extends">@extends</a></li>
+                    <li><a href="#@abstract">@abstract</a></li>
+                    <li><a href="#@override">@override</a></li>
+                    <li><a href="#@interface">@interface</a></li>
+                    <li><a href="#@implements">@implements</a></li>
+                </ul>
+            </div>
+            <div>
+                <h2>模块相关</h2>
+                <ul>
+                    <li><a href="#@module">@module</a></li>
+                    <li><a href="#@exports">@exports</a></li>
+                    <li><a href="#@requires">@requires</a></li>
+                </ul>
+            </div>
+            <div>
+                <h2>其他</h2>
+                <ul>
+                    <li><a href="#@alias">@alias</a></li>
+                    <li><a href="#@name">@name</a></li>
+                    <li><a href="#@inheritdoc">@inheritdoc</a></li>
+                    <li><a href="#@mixin">@mixin</a></li>
+                    <li><a href="#@mixes">@mixes</a></li>
+                    <li><a href="#@see">@see</a></li>
+                    <li><a href="#@link">@link</a></li>
+                </ul>
+            </div>
+        </div>
     </div>
-
-    
-
-    
-
-    
-
-     
-
-    
-
-    
-
-    
-
-    
-
-    
-</article>
-
-</section>
-
-
-
-
-
-
-
-<section>
-
-<header>
-    
-        <h2>
-        tag-alias.js
-        </h2>
-        
-    
-</header>
-
-<article>
-    <div class="container-overview">
-    
-        
-            <div class="description">示例@alias</div>
-        
-
-        
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="tag-alias.js.html">tag-alias.js</a>, <a href="tag-alias.js.html#line1">line 1</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-        
-    
-    </div>
-
-    
-
-    
-
-    
-
-     
-
-    
-
-    
-
-    
-
-    
-
-    
-</article>
-
-</section>
-
-
-
-
-
-
-
-<section>
-
-<header>
-    
-        <h2>
-        tag-author.js
-        </h2>
-        
-    
-</header>
-
-<article>
-    <div class="container-overview">
-    
-        
-            <div class="description">示例@author</div>
-        
-
-        
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-author">Author:</dt>
-    <dd class="tag-author">
-        <ul>
-            <li><a href="mailto:yussicahe@gmail.com">Yussicahe</a></li>
+    <div class="content">
+        <ul class="lists">
+            <li id="@file">
+                <div class="desc">
+                    <h3>@file</h3>
+                    <p>对文件的描述，用于文件的头部</p>
+                </div>
+                <div class="code">
+<pre><code>/**
+ * @file 
+ */
+</code></pre>
+                </div>
+            </li>
+            <li id="@author">
+                <div class="desc">
+                    <h3>@author &lt;name&gt; [&lt;emailAddress&gt;]</h3>
+                    <p>代码的作者<br />在姓名后面用尖括号加上邮箱会被自动转成 <code>mailto:</code> 的链接</p>
+                </div>
+                <div class="code">
+<pre><code>/**
+ * @author yussicahe &lt;yussicahe@gmail.com&gt; 
+ */
+</code></pre>
+                </div>
+            </li>
+            <li id="@copyright">
+                <div class="desc">
+                    <h3>@copyright &lt;some copyright text&gt;</h3>
+                    <p>与@file结合使用，说明版权相关的信息</p>
+                </div>
+                <div class="code">
+<pre><code>/**
+ * @file 示例@copyright
+ * @copyright 2015 Tencent AlloyTeam
+ */
+</code></pre>
+                </div>
+            </li>
+            <li id="@license">
+                <div class="desc">
+                    <h3>@license &lt;identifier&gt;</h3>
+                    <p>说明许可证相关的信息</p>
+                </div>
+                <div class="code">
+<pre><code>/**
+ * @file 示例@license
+ * @license http://www.AlloyTeam.com/license.txt
+ */
+</code></pre>
+                </div>
+            </li>
+            <li id="@type">
+                <div class="desc">
+                    <h3>@type {typeName}</h3>
+                    <p>'*'表示任何类型</p>
+                    <p>'?'表示可以为null</p>
+                    <p>'!'表示不能为null</p>
+                    <p>数组用'[]'表示</p>
+                    <p>类型有多种情况需用'|'进行分隔，并加上'()'</p>
+                    <p>可以使用 <code>@callback</code> 或 <code>@typedef</code> 定义的类型</p>
+                </div>
+                <div class="code">
+<pre><code>/**
+ * @type {number}
+ */
+var foo1;
+
+/**
+ * @type {*}
+ * @desc 任何类型
+ */
+var foo2;
+
+/**
+ * @type {?string}
+ * @desc string或者null
+ */
+var foo3;
+
+/**
+ * @type {!string}
+ * @desc string且不能为null
+ */
+var foo4;
+
+/**
+ * @type {boolean[]}
+ * @desc boelean数组
+ */
+var foo5;
+
+/**
+ * @type {(number|string)}
+ * @desc number或者string
+ */
+var foo6;
+
+/**
+ * @type {object}
+ * @desc 对象
+ * @property {string} a - 属性a
+ */
+var foo7 = {
+    a: 'a'
+};
+</code></pre>
+                </div>
+            </li>
+            <li id="@var">
+                <div class="desc">
+                    <h3>@var [&lt;type&gt;] [&lt;name&gt;]</h3>
+                    <p>标识一个变量</p>
+                </div>
+                <div class="code">
+<pre><code>/**
+ * @var
+ */
+var foo;
+</code></pre>
+                </div>
+            </li>
+            <li id="@property">
+                <div class="desc">
+                    <h3>@property [&lt;type&gt;] [&lt;name&gt;] [some description]</h3>
+                    <p>描述对象的属性</p>
+                </div>
+                <div class="code">
+<pre><code>/**
+ * @var {object}
+ * @property {string} a - 属性a
+ * @property {string} b - 属性b
+ */
+var foo = {
+    a: 'a',
+    b: 'b'
+}
+</code></pre>
+                </div>
+            </li>
+            <li id="@func">
+                <div class="desc">
+                    <h3>@func [&lt;FunctionName&gt;]</h3>
+                    <p>标识一个函数</p>
+                </div>
+                <div class="code">
+<pre><code>/**
+ * @func
+ */
+function foo() {
+    ...
+}
+</code></pre>
+                </div>
+            </li>
+            <li id="@param">
+                <div class="desc">
+                    <h3>@param {&lt;type&gt;} name - some description</h3>
+                    <p>非必传参数需给参数名加上'[]'</p>
+                    <p>参数如有默认值需用'='表示</p>
+                    <p>如果参数是object，可继续用 <code>@param</code> 对其属性进行详细说明</p>
+                    <p>若干个参数用'...'表示</p>
+                </div>
+                <div class="code">
+<pre><code>/**
+ * @func
+ * @desc 一个带参数的函数
+ * @param {string} a - 参数a
+ * @param {number} b=1 - 参数b默认值为1
+ * @param {string} c=1 - 参数c有两种支持的取值&lt;/br&gt;1—表示x&lt;/br&gt;2—表示xx
+ * @param {object} d - 参数d为一个对象
+ * @param {string} d.e - 参数d的e属性
+ * @param {string} d.f - 参数d的f属性
+ * @param {object[]} g - 参数g为一个对象数组
+ * @param {string} g.h - 参数g数组中一项的h属性
+ * @param {string} g.i - 参数g数组中一项的i属性
+ * @param {string} [j] - 参数j是一个可选参数 
+ */
+function foo(a, b, c, d, g, j) {}
+
+/**
+ * @func
+ * @desc 一个带若干参数的函数
+ * @param {...string} a - 参数a
+ */
+function bar(a) {}
+</code></pre>
+                </div>
+            </li>
+            <li id="@returns">
+                <div class="desc">
+                    <h3>@returns {&lt;type&gt;} some description</h3>
+                    <p>描述一个函数的返回值</p>
+                </div>
+                <div class="code">
+<pre><code>/**
+ * @func
+ * @returns {boolean} 返回值为true
+ */
+function foo() {
+    return true;
+}
+</code></pre>
+                </div>
+            </li>
+            <li id="@namespace">
+                <div class="desc">
+                    <h3>@namespace [{&lt;type&gt;}] &lt;SomeName&gt;]</h3>
+                    <p>标识一个命名空间</p>
+                </div>
+                <div class="code">
+<pre><code>/**
+ * @namespace
+ */
+var $ = {
+    ...    
+}
+</code></pre>
+                </div>
+            </li>
+            <li id="@desc">
+                <div class="desc">
+                    <h3>@desc &lt;some description&gt;</h3>
+                    <p>对某个部分的详细描述和说明</p>
+                </div>
+                <div class="code">
+<pre><code>/**
+ * @desc 这是一个变量
+ */
+var foo;
+</code></pre>
+                </div>
+            </li>
+            <li id="@summary">
+                <div class="desc">
+                    <h3>@summary &lt;some description&gt;</h3>
+                    <p>对某个部分的简短描述和说明</p>
+                </div>
+                <div class="code">
+<pre><code>/**
+ * @summary 一个变量
+ */
+var foo;
+</code></pre>
+                </div>
+            </li>
+            <li id="@constant">
+                <div class="desc">
+                    <h3>@constant [&lt;type&gt; &lt;name&gt;]</h3>
+                    <p>标识常量</p>
+                </div>
+                <div class="code">
+<pre><code>/**
+ * @constant {string}
+ */
+var COLOR_WHITE = '#fff';
+</code></pre>
+                </div>
+            </li>
+            <li id="@readonly">
+                <div class="desc">
+                    <h3>@readonly</h3>
+                    <p>仅仅是注释，JSDoc不会去检查究竟是不是readonly</p>
+                </div>
+                <div class="code">
+<pre><code>/**
+ * @constant {string}
+ * @readonly
+ */
+var COLOR_RED = '#f00';
+</code></pre>
+                </div>
+            </li>
+            <li id="@default">
+                <div class="desc">
+                    <h3>@default [&lt;some value&gt;]</h3>
+                    <p>变量的初始值</p>
+                </div>
+                <div class="code">
+<pre><code>/**
+ * @constant {string}
+ * @default #000
+ */
+var COLOR_BLACK = '#000';
+</code></pre>
+                </div>
+            </li>
+            <li id="@enum">
+                <div class="desc">
+                    <h3>@enum [&lt;type&gt;]</h3>
+                    <p>相同类型的集合</p>
+                    <p class="warn">注：<br />默认集合中的所有项都是相同类型，可以用@type指明某一项为其他类型</p>
+                </div>
+                <div class="code">
+<pre><code>/**
+ * @enum {number}
+ * @desc cgi常见的返回码
+ */
+var RETCODE = {
+    /**
+     * @desc 未登录
+     */
+    NOT_LOGIN: 100000,
+    /**
+     * @desc 参数错误
+     */
+    PARAM_ERROR: 100001,
+    /**
+     * @type {string}
+     * @desc 未知错误
+     */
+    UNKOWN_ERROR: 'unkown'
+}
+</code></pre>
+                </div>
+            </li>
+            <li id="@example">
+                <div class="desc">
+                    <h3>@example</h3>
+                    <p>使用示例</p>
+                    <p>示例代码在文档中会被高亮显示</p>
+                </div>
+                <div class="code">
+<pre><code>/**
+ * @func
+ * @desc 计算两个数值的和
+ * @param {number} a - 加数a
+ * @param {number} b - 加数b
+ * @returns {number} 返回a和b的和
+ * @example
+ * add(1, 2);    // 返回3
+ */
+function add(a, b) {
+    return a + b;
+}
+</code></pre>
+                </div>
+            </li>
+            <li id="@throws">
+                <div class="desc">
+                    <h3>@throws [{&lt;type&gt;} free-form description]</h3>
+                    <p>表明这部分代码会抛出某个异常</p>
+                </div>
+                <div class="code">
+<pre><code>/**
+* @func
+* @throws {string} - 抛出'Error'异常
+*/
+function foo() {
+    ...
+    throw 'Error';
+}
+</code></pre>
+                </div>
+            </li>
+            <li id="@todo">
+                <div class="desc">
+                    <h3>@todo text describing thing to do</h3>
+                    <p>后续需要做的事</p>
+                </div>
+                <div class="code">
+<pre><code> /**
+  * @func
+  * @todo 这个函数需要优化
+  */
+function foo() {
+    ...
+}
+</code></pre>
+                </div>
+            </li>
+            <li id="@deprecated">
+                <div class="desc">
+                    <h3>@deprecated [&lt;some text&gt;]</h3>
+                    <p>已弃用的标识</p>
+                </div>
+                <div class="code">
+<pre><code>/**
+* @func
+* @deprecated 已弃用
+*/
+function deprecatedFunc() {
+    ...
+}
+</code></pre>
+                </div>
+            </li>
+            <li id="@borrows">
+                <div class="desc">
+                    <h3>@borrows &lt;that namepath&gt; as &lt;this namepath&gt;</h3>
+                    <p>可理解为复制注释</p>
+                    <p>当有多个地方引用了同一个函数，只需在一处写好注释，然后用@borrows即可</p>
+                </div>
+                <div class="code">
+<pre><code>/**
+ * @func
+ * @param {string} a - 参数a
+ * @returns {boolean} 返回值 
+ */
+function foo(a) {
+    ...
+    return true;
+}
+
+/**
+ * @namespace
+ * @borrows foo as bar
+ */
+window.$ = {
+    bar: foo
+}
+</code></pre>
+                </div>
+            </li>
+            <li id="@callback">
+                <div class="desc">
+                    <h3>@callback &lt;namepath&gt;</h3>
+                    <p>定义一个回调函数，和 <code>@typedef</code> 一样，是一种自定义类型</p>
+                </div>
+                <div class="code">
+<pre><code>/**
+ * @callback myCallback
+ * @desc 这是自定义的type
+ * @param {number} a - 参数a
+ * @returns {boolean} 返回值
+ */
+function myCallback(a) {
+    ...
+    return true;
+}
+
+/**
+ * @func
+ * @param {myCallback} a - 参数a是一个回调函数
+ */
+function foo(a) {
+    ...
+}
+</code></pre>
+                </div>
+            </li>
+            <li id="@typedef">
+                <div class="desc">
+                    <h3>@typedef [&lt;type&gt;] &lt;namepath&gt;</h3>
+                    <p>定义一个自定义类型</p>
+                    <p>定义后可以在 <code>@type</code> <code>@param</code> 等标签中使用</p>
+                </div>
+                <div class="code">
+<pre><code>/**
+ * @typedef myType
+ * @desc 这是自定义的type
+ * @property {number} a - 属性a
+ * @property {string} b - 属性b
+ */
+
+/**
+ * @type myType
+ */
+var foo;
+</code></pre>
+                </div>
+            </li>
+            <li id="@this">
+                <div class="desc">
+                    <h3>@this</h3>
+                    <p>说明此处 <code>this</code> 所指代的内容</p>
+                </div>
+                <div class="code">
+<pre><code>/**
+ *@class
+ */
+function myClass() {
+    ...
+}
+
+/**
+ * @func
+ * @this myClass
+ * @param {string} a - 参数a
+ */
+function foo(a) {
+    this.a = a;
+}
+
+foo.call(new myClass(), 'a');
+</code></pre>
+                </div>
+            </li>
+            <li id="@global">
+                <div class="desc">
+                    <h3>@global</h3>
+                    <p>全局标识</p>
+                </div>
+                <div class="code">
+<pre><code>/**
+ * @type {number}
+ * @global 
+ */
+var foo;
+</code></pre>
+                </div>
+            </li>
+            <li id="@inner">
+                <div class="desc">
+                    <h3>@inner</h3>
+                    <p>内部属性或方法的标识，使用后可以通过 <code>Parent~Child</code> 的方式来引用</p>
+                </div>
+                <div class="code">
+<pre><code>/**
+ * @class 
+ */
+function myClass() {
+    ...
+
+    /**
+     * @func
+     * @inner
+     */
+    function foo() {
+        ...
+    }
+}
+</code></pre>
+                </div>
+            </li>
+            <li id="@ignore">
+                <div class="desc">
+                    <h3>@ignore</h3>
+                    <p>告诉JSDoc忽略这部分代码</p>
+                </div>
+                <div class="code">
+<pre><code>/**
+ * @ignore
+ */
+var foo;
+</code></pre>
+                </div>
+            </li>
+            <li id="@version">
+                <div class="desc">
+                    <h3>@version</h3>
+                    <p>版本号</p>
+                </div>
+                <div class="code">
+<pre><code>/**
+ * @func
+ * @version 1.0
+ */
+ function foo() {
+    ...
+}
+</code></pre>
+                </div>
+            </li>
+            <li id="@since">
+                <div class="desc">
+                    <h3>@since</h3>
+                    <p>表明该内容出现在一个特定的版本之后</p>
+                </div>
+                <div class="code">
+<pre><code>/**
+ * @func
+ * @since 2.0
+ */
+ function bar() {
+    ...
+}
+</code></pre>
+                </div>
+            </li>
+            <li id="@class">
+                <div class="desc">
+                    <h3>@class [&lt;type&gt; &lt;name&gt;]</h3>
+                    <p>标识一个函数为构造函数，可以用 <code>new</code> 的方式实例化</p>
+                </div>
+                <div class="code">
+<pre><code>/**
+ * @class 
+ */
+function myClass() {
+    ...
+}
+</code></pre>
+                </div>
+            </li>
+            <li id="@classdesc">
+                <div class="desc">
+                    <h3>@classdesc &lt;some description&gt;</h3>
+                    <p>与 <code>@class</code> 结合使用</p>
+                    <p class="warn">注：<br />与 <code>@desc</code> 不同，<code>@classdesc</code> 是对类的描述，而 <code>@desc</code> 是对类的构造函数的描述</p>
+                </div>
+                <div class="code">
+<pre><code>/**
+ * @class
+ * @classdesc 这是对myClass类的描述
+ * @desc 这是对myClass类的构造函数的描述
+ */
+function myClass() {
+    ...
+}
+</code></pre>
+                </div>
+            </li>
+            <li id="@member">
+                <div class="desc">
+                    <h3>@member [&lt;type&gt;] [&lt;name&gt;]</h3>
+                    <p>标识类的属性</p>
+                </div>
+                <div class="code">
+<pre><code>/**
+ * @class
+ */
+function myClass() {
+    ...
+    /**
+     * @member {string}
+     */
+    this.foo = 'a';
+}
+</code></pre>
+                </div>
+            </li>
+            <li id="@method">
+                <div class="desc">
+                    <h3>@method [&lt;FunctionName&gt;]</h3>
+                    <p>标识类的方法</p>
+                </div>
+                <div class="code">
+<pre><code>/**
+ * @class
+ */
+function myClass() {
+    ...
+}
+
+/**
+ * @method
+ * @param {string} a - 参数a
+ */
+myClass.prototype.foo = function(a) {
+    ...
+}
+</code></pre>
+                </div>
+            </li>
+            <li id="@public">
+                <div class="desc">
+                    <h3>@public</h3>
+                    <p>标识类的属性或方法的访问范围是public</p>
+                </div>
+                <div class="code">
+<pre><code>/**
+ * @class
+ */
+function myClass() {
+    ...
+}
+
+/**
+ * @method
+ * @public
+ * @param {string} a - 参数a
+ */
+myClass.prototype.foo = function(a) {
+    ...
+}
+</code></pre>
+                </div>
+            </li>
+            <li id="@private">
+                <div class="desc">
+                    <h3>@private</h3>
+                    <p>标识类的属性或方法的访问范围是private</p>
+                </div>
+                <div class="code">
+<pre><code>/**
+ * @class
+ */
+function myClass() {
+    ...
+}
+
+/**
+ * @method
+ * @private
+ * @param {string} a - 参数a
+ */
+myClass.prototype.foo = function(a) {
+    ...
+}
+</code></pre>
+                </div>
+            </li>
+            <li id="@protected">
+                <div class="desc">
+                    <h3>@protected</h3>
+                    <p>标识类的属性或方法的访问范围是protected</p>
+                </div>
+                <div class="code">
+<pre><code>/**
+ * @class
+ */
+function myClass() {
+    ...
+}
+
+/**
+ * @method
+ * @protected
+ * @param {string} a - 参数a
+ */
+myClass.prototype.foo = function(a) {
+    ...
+}
+</code></pre>
+                </div>
+            </li>
+            <li id="@instance">
+                <div class="desc">
+                    <h3>@instance</h3>
+                    <p>实例属性或方法的标识</p>
+                </div>
+                <div class="code">
+<pre><code>/**
+ * @class
+ */
+function myClass() {
+    ...
+    /**
+     * @member {string}
+     * @instance
+     */
+    this.foo = 'a';
+}
+</code></pre>
+                </div>
+            </li>
+            <li id="@static">
+                <div class="desc">
+                    <h3>@static</h3>
+                    <p>静态属性或方法的标识</p>
+                </div>
+                <div class="code">
+<pre><code>/**
+ * @class
+ */
+function myClass() {
+    ...
+}
+
+/**
+ * @static
+ */
+myClass.foo = 'a';
+</code></pre>
+                </div>
+            </li>
+            <li id="@constructs">
+                <div class="desc">
+                    <h3>@constructs &lt;name&gt;</h3>
+                    <p>当使用对象直接量去定义类时，可以通过 <code>@constructs</code> 标识某个函数为类的构造函数</p>
+                    <p class="warn">注：<br />不要和 <code>@class同时使用</code>,否则会在文档中出现两个同名的类</p>
+                </div>
+                <div class="code">
+<pre><code>createClass('myClass',
+    {
+        /**
+         * @constructs
+         * @param {string} a - 参数a
+         */
+        init: function (a) {
+            /**
+             * @member {string}
+             */
+            this.a = a;
+        }
+    }
+)
+</code></pre>
+                </div>
+            </li>
+            <li id="@lends">
+                <div class="desc">
+                    <h3>@lends &lt;namepath&gt;</h3>
+                    <p>把对象直接量的属性和方法指定为某个类的属性和方法</p>
+                </div>
+                <div class="code">
+<pre><code>createClass('myClass',
+    /** 
+     * @lends myClass.prototype
+     */
+    {
+        /**
+         * @method
+         * @param {string} b - 参数b
+         */
+        a: function (b) {
+            ...
+        },
+        /**
+         * @method
+         * @returns {boolean} 返回值
+         */
+        c: function () {
+            return true;
+        }
+    }
+);
+</code></pre>
+                </div>
+            </li>
+            <li id="@extends">
+                <div class="desc">
+                    <h3>@extends &lt;namepath&gt;</h3>
+                    <p>用来表明继承关系</p>
+                </div>
+                <div class="code">
+<pre><code>/**
+ * @class
+ */
+function myClass() {
+    ...
+}
+
+/**
+ * @class
+ * @extends myClass
+ */
+function subClass() {
+    ...
+}
+</code></pre>
+                </div>
+            </li>
+            <li id="@abstract">
+                <div class="desc">
+                    <h3>@abstract</h3>
+                    <p>标识子类必须实现或重写父类的此方法</p>
+                </div>
+                <div class="code">
+<pre><code>/**
+/**
+ * @class
+ */
+function myClass() {
+    ...
+}
+
+/**
+ * @abstract
+ * @method
+ * @desc 子类需要重写这个方法
+ */
+myClass.prototype.foo = function () {
+    ...
+}
+</code></pre>
+                </div>
+            </li>
+            <li id="@override">
+                <div class="desc">
+                    <h3>@override</h3>
+                    <p>表明此方法是重写了父类的同名方法</p>
+                </div>
+                <div class="code">
+<pre><code>/**
+ * @class
+ */
+function myClass() {
+    ...
+}
+
+/**
+ * @method
+ * @param {string} a - 参数a
+ * @returns {boolean} 返回值
+ */
+myClass.prototype.foo = function (a) {
+    ...
+    return true;
+}
+
+/**
+ * @class
+ * @extends myClass
+ */
+function subClass() {
+    ...
+}
+
+subClass.prototype = Object.create(myClass.prototype);
+
+/**
+ * @override
+ */
+subClass.prototype.foo = function (a) {
+    ...
+    return true;
+};
+</code></pre>
+                </div>
+            </li>
+            <li id="@interface">
+                <div class="desc">
+                    <h3>@interface [&lt;name&gt;]</h3>
+                    <p>定义接口</p>
+                </div>
+                <div class="code">
+<pre><code>/**
+ * @interface
+ */
+var myInterface = {
+    /**
+     * @method
+     * @param {string} b - 参数b
+     */
+    a: function (b) {
+        ...
+    }
+}
+</code></pre>
+                </div>
+            </li>
+            <li id="@implements">
+                <div class="desc">
+                    <h3>@implements {typeExpression}</h3>
+                    <p>实现了某个接口</p>
+                </div>
+                <div class="code">
+<pre><code>/**
+ * @interface
+ */
+var myInterface = {
+    /**
+     * @method
+     * @param {string} b - 参数b
+     */
+    a: function (b) {
+        ...
+    }
+}
+
+/**
+ * @class
+ * @implements {myInterface}
+ */
+function myClass() {
+    ...
+}
+
+myClass.prototype.a = function (b) {
+    ...
+}
+</code></pre>
+                </div>
+            </li>
+            <li id="@module">
+                <div class="desc">
+                    <h3>@module [[{&lt;type&gt;}] &lt;moduleName&gt;]</h3>
+                    <p>定义一个模块</p>
+                </div>
+                <div class="code">
+<pre><code>define(function() {
+    /**
+     * @module foo
+     */
+    var exports = {};
+
+    /**
+     * @method
+     * @returns {string} 返回值
+     */
+    exports.a = function() {
+        return 'a';
+    };
+
+    return exports;
+});
+</code></pre>
+                </div>
+            </li>
+            <li id="@exports">
+                <div class="desc">
+                    <h3>@exports &lt;moduleName&gt;</h3>
+                    <p>当不是用 <code>exports</code> 或者 <code>module.exports</code> 对外提供模块接口时，需要使用 <code>@exports</code> 而不是 <code>@module</code></p>
+                </div>
+                <div class="code">
+<pre><code>define(function() {
+    /**
+     * @exports bar
+     */
+    var a = {};
+
+    /**
+     * @method
+     * @param {string} c - 参数c
+     */
+    a.b = function (c) {
+        ...
+    };
+
+    return a;
+});
+</code></pre>
+                </div>
+            </li>
+            <li id="@requires">
+                <div class="desc">
+                    <h3>@requires &lt;someModuleName&gt;</h3>
+                    <p>需要某个模块</p>
+                </div>
+                <div class="code">
+<pre><code>/**
+ * @file 示例@requires
+ * @requires module1
+ * @requires module2
+ */
+
+require([
+    './module1',
+    './module2'
+], function (module1, module2) {
+    ...
+});
+</code></pre>
+                </div>
+            </li>
+            <li id="@alias">
+                <div class="desc">
+                    <h3>@alias &lt;aliasNamepath&gt;</h3>
+                    <p>告诉JSDoc在生成文档时用另一个namepath去处理当前的内容</p>
+                    <p class="warn">
+                        注：<br /><code>@alias</code> 不同于 <code>@name</code>，<code>@name</code>会告诉JSDoc忽略这部分代码
+                    </p>
+                </div>
+                <div class="code">
+<pre><code>/**
+ * @namespace
+ */
+var $ = {};
+
+/**
+ * @alias $.foo
+ * @type {object}
+ */
+var foo = {};
+
+$.foo = foo;
+</code></pre>
+                </div>
+            </li>
+            <li id="@name">
+                <div class="desc">
+                    <h3>@name &lt;namepath&gt;</h3>
+                    <p>使用 <code>@name</code> 时，需要提供很多其他的注释，如 <code>@type</code> 等，因为JSDoc会忽略这部分代码</p>
+                    <p>适用于在运行时才生成的函数等</p>
+                </div>
+                <div class="code">
+<pre><code>/**
+ * @name foo
+ * @func
+ * @param {string} a - 参数a
+ */
+eval('window.foo = function (a) {};');
+</code></pre>
+                </div>
+            </li>
+            <li id="@inheritdoc">
+                <div class="desc">
+                    <h3>@inheritdoc</h3>
+                    <p>继承父类的注释</p>
+                </div>
+                <div class="code">
+<pre><code>/**
+ * @class
+ */
+function myClass() {
+    ...
+}
+
+/**
+ * @method
+ * @param {string} a - 参数a
+ * @returns {boolean} 返回值
+ */
+myClass.prototype.foo = function (a) {
+    ...
+    return true;
+}
+
+/**
+ * @class
+ * @extends myClass
+ */
+function subClass() {
+    ...
+}
+
+subClass.prototype = Object.create(myClass.prototype);
+
+/**
+ * @inheritdoc
+ */
+subClass.prototype.foo = function (a) {
+    ...
+    return true;
+};
+</code></pre>
+                </div>
+            </li>
+            <li id="@mixin">
+                <div class="desc">
+                    <h3>@mixin [&lt;MixinName&gt;]</h3>
+                    <p>表明当前对象的属性和方法可以被添加到另一个对象中</p>
+                </div>
+                <div class="code">
+<pre><code>/**
+ * @mixin
+ * @property {string} a - 属性a
+ * @property {number} b - 属性b
+ */
+var foo = {
+    a: 'a',
+    b: 1
+}
+</code></pre>
+                </div>
+            </li>
+            <li id="@mixes">
+                <div class="desc">
+                    <h3>@mixes &lt;OtherObjectPath&gt;</h3>
+                    <p>将带有 <code>@mixin</code> 标签的对象的属性和方法添加进来</p>
+                </div>
+                <div class="code">
+<pre><code>/**
+ * @mixin
+ * @property {string} a - 属性a
+ * @property {number} b - 属性b
+ */
+var foo = {
+    a: 'a',
+    b: 1
+}
+
+/**
+ * @var {object}
+ * @property {boolean} c - 属性c
+ * @mixes foo
+ */
+var bar = {
+    c: true
+}
+
+for (var key in foo) {
+    var[key] = foo[key];
+}
+</code></pre>
+                </div>
+            </li>
+            <li id="@see">
+                <div class="desc">
+                    <h3>@see &lt;namepath&gt;</h3>
+                    <p>页面里超链接的作用</p>
+                </div>
+                <div class="code">
+<pre><code>/**
+ * @class
+ */
+function myClass() {
+    /**
+     * @member {string}
+     */
+    this.foo = 'a';
+}
+
+/**
+ * @see myClass.foo
+ */
+var bar = myClass.foo;
+</code></pre>
+                </div>
+            </li>
+            <li id="@link">
+                <div class="desc">
+                    <h3>{@link namepath or url}</h3>
+                    <p>可以理解为注释中内联的 <code>@see</code></p>
+                </div>
+                <div class="code">
+<pre><code>/**
+ * @class
+ */
+function myClass() {
+    ...
+}
+
+/**
+ * @desc 这是{@link myClass}的一个实例 
+ */
+var foo = new myClass();
+</code></pre>
+                </div>
+            </li>
         </ul>
-    </dd>
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="tag-author.js.html">tag-author.js</a>, <a href="tag-author.js.html#line1">line 1</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-        
-    
     </div>
-
-    
-
-    
-
-    
-
-     
-
-    
-
-    
-
-    
-
-    
-
-    
-</article>
-
-</section>
-
-
-
-
-
-
-
-<section>
-
-<header>
-    
-        <h2>
-        tag-borrows.js
-        </h2>
-        
-    
-</header>
-
-<article>
-    <div class="container-overview">
-    
-        
-            <div class="description">示例@borrows</div>
-        
-
-        
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="tag-borrows.js.html">tag-borrows.js</a>, <a href="tag-borrows.js.html#line1">line 1</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-        
-    
-    </div>
-
-    
-
-    
-
-    
-
-     
-
-    
-
-    
-
-    
-
-    
-
-    
-</article>
-
-</section>
-
-
-
-
-
-
-
-<section>
-
-<header>
-    
-        <h2>
-        tag-callback.js
-        </h2>
-        
-    
-</header>
-
-<article>
-    <div class="container-overview">
-    
-        
-            <div class="description">示例@callback</div>
-        
-
-        
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="tag-callback.js.html">tag-callback.js</a>, <a href="tag-callback.js.html#line1">line 1</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-        
-    
-    </div>
-
-    
-
-    
-
-    
-
-     
-
-    
-
-    
-
-    
-
-    
-
-    
-</article>
-
-</section>
-
-
-
-
-
-
-
-<section>
-
-<header>
-    
-        <h2>
-        tag-class.js
-        </h2>
-        
-    
-</header>
-
-<article>
-    <div class="container-overview">
-    
-        
-            <div class="description">示例@class</div>
-        
-
-        
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="tag-class.js.html">tag-class.js</a>, <a href="tag-class.js.html#line1">line 1</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-        
-    
-    </div>
-
-    
-
-    
-
-    
-
-     
-
-    
-
-    
-
-    
-
-    
-
-    
-</article>
-
-</section>
-
-
-
-
-
-
-
-<section>
-
-<header>
-    
-        <h2>
-        tag-classdesc.js
-        </h2>
-        
-    
-</header>
-
-<article>
-    <div class="container-overview">
-    
-        
-            <div class="description">示例@classdesc</div>
-        
-
-        
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="tag-classdesc.js.html">tag-classdesc.js</a>, <a href="tag-classdesc.js.html#line1">line 1</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-        
-    
-    </div>
-
-    
-
-    
-
-    
-
-     
-
-    
-
-    
-
-    
-
-    
-
-    
-</article>
-
-</section>
-
-
-
-
-
-
-
-<section>
-
-<header>
-    
-        <h2>
-        tag-constant.js
-        </h2>
-        
-    
-</header>
-
-<article>
-    <div class="container-overview">
-    
-        
-            <div class="description">示例@constant</div>
-        
-
-        
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="tag-constant.js.html">tag-constant.js</a>, <a href="tag-constant.js.html#line1">line 1</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-        
-    
-    </div>
-
-    
-
-    
-
-    
-
-     
-
-    
-
-    
-
-    
-
-    
-
-    
-</article>
-
-</section>
-
-
-
-
-
-
-
-<section>
-
-<header>
-    
-        <h2>
-        tag-constructs_lends.js
-        </h2>
-        
-    
-</header>
-
-<article>
-    <div class="container-overview">
-    
-        
-            <div class="description">示例@construct、@lends</div>
-        
-
-        
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="tag-constructs_lends.js.html">tag-constructs_lends.js</a>, <a href="tag-constructs_lends.js.html#line1">line 1</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-        
-    
-    </div>
-
-    
-
-    
-
-    
-
-     
-
-    
-
-    
-
-    
-
-    
-
-    
-</article>
-
-</section>
-
-
-
-
-
-
-
-<section>
-
-<header>
-    
-        <h2>
-        tag-copyright.js
-        </h2>
-        
-    
-</header>
-
-<article>
-    <div class="container-overview">
-    
-        
-            <div class="description">示例@copyright</div>
-        
-
-        
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-copyright">Copyright:</dt>
-    <dd class="tag-copyright"><ul class="dummy"><li>2014 Tencent AlloyTeam</li></ul></dd>
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="tag-copyright.js.html">tag-copyright.js</a>, <a href="tag-copyright.js.html#line1">line 1</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-        
-    
-    </div>
-
-    
-
-    
-
-    
-
-     
-
-    
-
-    
-
-    
-
-    
-
-    
-</article>
-
-</section>
-
-
-
-
-
-
-
-<section>
-
-<header>
-    
-        <h2>
-        tag-default.js
-        </h2>
-        
-    
-</header>
-
-<article>
-    <div class="container-overview">
-    
-        
-            <div class="description">示例@default</div>
-        
-
-        
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="tag-default.js.html">tag-default.js</a>, <a href="tag-default.js.html#line1">line 1</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-        
-    
-    </div>
-
-    
-
-    
-
-    
-
-     
-
-    
-
-    
-
-    
-
-    
-
-    
-</article>
-
-</section>
-
-
-
-
-
-
-
-<section>
-
-<header>
-    
-        <h2>
-        tag-deprecated.js
-        </h2>
-        
-    
-</header>
-
-<article>
-    <div class="container-overview">
-    
-        
-            <div class="description">示例@deprecated</div>
-        
-
-        
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="tag-deprecated.js.html">tag-deprecated.js</a>, <a href="tag-deprecated.js.html#line1">line 1</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-        
-    
-    </div>
-
-    
-
-    
-
-    
-
-     
-
-    
-
-    
-
-    
-
-    
-
-    
-</article>
-
-</section>
-
-
-
-
-
-
-
-<section>
-
-<header>
-    
-        <h2>
-        tag-desc_summary.js
-        </h2>
-        
-    
-</header>
-
-<article>
-    <div class="container-overview">
-    
-        
-            <div class="description">示例@desc、@summary</div>
-        
-
-        
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="tag-desc_summary.js.html">tag-desc_summary.js</a>, <a href="tag-desc_summary.js.html#line1">line 1</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-        
-    
-    </div>
-
-    
-
-    
-
-    
-
-     
-
-    
-
-    
-
-    
-
-    
-
-    
-</article>
-
-</section>
-
-
-
-
-
-
-
-<section>
-
-<header>
-    
-        <h2>
-        tag-enum.js
-        </h2>
-        
-    
-</header>
-
-<article>
-    <div class="container-overview">
-    
-        
-            <div class="description">示例@enum</div>
-        
-
-        
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="tag-enum.js.html">tag-enum.js</a>, <a href="tag-enum.js.html#line1">line 1</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-        
-    
-    </div>
-
-    
-
-    
-
-    
-
-     
-
-    
-
-    
-
-    
-
-    
-
-    
-</article>
-
-</section>
-
-
-
-
-
-
-
-<section>
-
-<header>
-    
-        <h2>
-        tag-example.js
-        </h2>
-        
-    
-</header>
-
-<article>
-    <div class="container-overview">
-    
-        
-            <div class="description">示例@example</div>
-        
-
-        
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="tag-example.js.html">tag-example.js</a>, <a href="tag-example.js.html#line1">line 1</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-        
-    
-    </div>
-
-    
-
-    
-
-    
-
-     
-
-    
-
-    
-
-    
-
-    
-
-    
-</article>
-
-</section>
-
-
-
-
-
-
-
-<section>
-
-<header>
-    
-        <h2>
-        tag-exports.js
-        </h2>
-        
-    
-</header>
-
-<article>
-    <div class="container-overview">
-    
-        
-            <div class="description">示例@exports</div>
-        
-
-        
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="tag-exports.js.html">tag-exports.js</a>, <a href="tag-exports.js.html#line1">line 1</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-        
-    
-    </div>
-
-    
-
-    
-
-    
-
-     
-
-    
-
-    
-
-    
-
-    
-
-    
-</article>
-
-</section>
-
-
-
-
-
-
-
-<section>
-
-<header>
-    
-        <h2>
-        tag-extends_override_inheritdoc.js
-        </h2>
-        
-    
-</header>
-
-<article>
-    <div class="container-overview">
-    
-        
-            <div class="description">示例@extends、@override、@inheritdoc</div>
-        
-
-        
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="tag-extends_override_inheritdoc.js.html">tag-extends_override_inheritdoc.js</a>, <a href="tag-extends_override_inheritdoc.js.html#line1">line 1</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-        
-    
-    </div>
-
-    
-
-    
-
-    
-
-     
-
-    
-
-    
-
-    
-
-    
-
-    
-</article>
-
-</section>
-
-
-
-
-
-
-
-<section>
-
-<header>
-    
-        <h2>
-        tag-file.js
-        </h2>
-        
-    
-</header>
-
-<article>
-    <div class="container-overview">
-    
-        
-            <div class="description">示例@file</div>
-        
-
-        
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="tag-file.js.html">tag-file.js</a>, <a href="tag-file.js.html#line1">line 1</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-        
-    
-    </div>
-
-    
-
-    
-
-    
-
-     
-
-    
-
-    
-
-    
-
-    
-
-    
-</article>
-
-</section>
-
-
-
-
-
-
-
-<section>
-
-<header>
-    
-        <h2>
-        tag-func.js
-        </h2>
-        
-    
-</header>
-
-<article>
-    <div class="container-overview">
-    
-        
-            <div class="description">示例@func</div>
-        
-
-        
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="tag-func.js.html">tag-func.js</a>, <a href="tag-func.js.html#line1">line 1</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-        
-    
-    </div>
-
-    
-
-    
-
-    
-
-     
-
-    
-
-    
-
-    
-
-    
-
-    
-</article>
-
-</section>
-
-
-
-
-
-
-
-<section>
-
-<header>
-    
-        <h2>
-        tag-global.js
-        </h2>
-        
-    
-</header>
-
-<article>
-    <div class="container-overview">
-    
-        
-            <div class="description">示例@global</div>
-        
-
-        
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="tag-global.js.html">tag-global.js</a>, <a href="tag-global.js.html#line1">line 1</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-        
-    
-    </div>
-
-    
-
-    
-
-    
-
-     
-
-    
-
-    
-
-    
-
-    
-
-    
-</article>
-
-</section>
-
-
-
-
-
-
-
-<section>
-
-<header>
-    
-        <h2>
-        tag-ignore.js
-        </h2>
-        
-    
-</header>
-
-<article>
-    <div class="container-overview">
-    
-        
-            <div class="description">示例@ignore</div>
-        
-
-        
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="tag-ignore.js.html">tag-ignore.js</a>, <a href="tag-ignore.js.html#line1">line 1</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-        
-    
-    </div>
-
-    
-
-    
-
-    
-
-     
-
-    
-
-    
-
-    
-
-    
-
-    
-</article>
-
-</section>
-
-
-
-
-
-
-
-<section>
-
-<header>
-    
-        <h2>
-        tag-instance_static_inner.js
-        </h2>
-        
-    
-</header>
-
-<article>
-    <div class="container-overview">
-    
-        
-            <div class="description">示例@instance、@static、@inner</div>
-        
-
-        
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="tag-instance_static_inner.js.html">tag-instance_static_inner.js</a>, <a href="tag-instance_static_inner.js.html#line1">line 1</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-        
-    
-    </div>
-
-    
-
-    
-
-    
-
-     
-
-    
-
-    
-
-    
-
-    
-
-    
-</article>
-
-</section>
-
-
-
-
-
-
-
-<section>
-
-<header>
-    
-        <h2>
-        tag-interface_implements.js
-        </h2>
-        
-    
-</header>
-
-<article>
-    <div class="container-overview">
-    
-        
-            <div class="description">示例@interface、@implements</div>
-        
-
-        
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="tag-interface_implements.js.html">tag-interface_implements.js</a>, <a href="tag-interface_implements.js.html#line1">line 1</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-        
-    
-    </div>
-
-    
-
-    
-
-    
-
-     
-
-    
-
-    
-
-    
-
-    
-
-    
-</article>
-
-</section>
-
-
-
-
-
-
-
-<section>
-
-<header>
-    
-        <h2>
-        tag-license.js
-        </h2>
-        
-    
-</header>
-
-<article>
-    <div class="container-overview">
-    
-        
-            <div class="description">示例@license</div>
-        
-
-        
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-license">License:</dt>
-    <dd class="tag-license"><ul class="dummy"><li><a href="http://www.AlloyTeam.com/license.txt" target="_blank">http://www.AlloyTeam.com/license.txt</a></li></ul></dd>
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="tag-license.js.html">tag-license.js</a>, <a href="tag-license.js.html#line1">line 1</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-        
-    
-    </div>
-
-    
-
-    
-
-    
-
-     
-
-    
-
-    
-
-    
-
-    
-
-    
-</article>
-
-</section>
-
-
-
-
-
-
-
-<section>
-
-<header>
-    
-        <h2>
-        tag-member_method_memberof.js
-        </h2>
-        
-    
-</header>
-
-<article>
-    <div class="container-overview">
-    
-        
-            <div class="description">示例@member、@method、@memberof</div>
-        
-
-        
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="tag-member_method_memberof.js.html">tag-member_method_memberof.js</a>, <a href="tag-member_method_memberof.js.html#line1">line 1</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-        
-    
-    </div>
-
-    
-
-    
-
-    
-
-     
-
-    
-
-    
-
-    
-
-    
-
-    
-</article>
-
-</section>
-
-
-
-
-
-
-
-<section>
-
-<header>
-    
-        <h2>
-        tag-mixin_mixes.js
-        </h2>
-        
-    
-</header>
-
-<article>
-    <div class="container-overview">
-    
-        
-            <div class="description">示例@mixin、@mixes</div>
-        
-
-        
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="tag-mixin_mixes.js.html">tag-mixin_mixes.js</a>, <a href="tag-mixin_mixes.js.html#line1">line 1</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-        
-    
-    </div>
-
-    
-
-    
-
-    
-
-     
-
-    
-
-    
-
-    
-
-    
-
-    
-</article>
-
-</section>
-
-
-
-
-
-
-
-<section>
-
-<header>
-    
-        <h2>
-        tag-module.js
-        </h2>
-        
-    
-</header>
-
-<article>
-    <div class="container-overview">
-    
-        
-            <div class="description">示例@module</div>
-        
-
-        
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="tag-module.js.html">tag-module.js</a>, <a href="tag-module.js.html#line1">line 1</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-        
-    
-    </div>
-
-    
-
-    
-
-    
-
-     
-
-    
-
-    
-
-    
-
-    
-
-    
-</article>
-
-</section>
-
-
-
-
-
-
-
-<section>
-
-<header>
-    
-        <h2>
-        tag-name.js
-        </h2>
-        
-    
-</header>
-
-<article>
-    <div class="container-overview">
-    
-        
-            <div class="description">示例@name</div>
-        
-
-        
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="tag-name.js.html">tag-name.js</a>, <a href="tag-name.js.html#line1">line 1</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-        
-    
-    </div>
-
-    
-
-    
-
-    
-
-     
-
-    
-
-    
-
-    
-
-    
-
-    
-</article>
-
-</section>
-
-
-
-
-
-
-
-<section>
-
-<header>
-    
-        <h2>
-        tag-namespace.js
-        </h2>
-        
-    
-</header>
-
-<article>
-    <div class="container-overview">
-    
-        
-            <div class="description">示例@namespace</div>
-        
-
-        
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="tag-namespace.js.html">tag-namespace.js</a>, <a href="tag-namespace.js.html#line1">line 1</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-        
-    
-    </div>
-
-    
-
-    
-
-    
-
-     
-
-    
-
-    
-
-    
-
-    
-
-    
-</article>
-
-</section>
-
-
-
-
-
-
-
-<section>
-
-<header>
-    
-        <h2>
-        tag-param.js
-        </h2>
-        
-    
-</header>
-
-<article>
-    <div class="container-overview">
-    
-        
-            <div class="description">示例@param</div>
-        
-
-        
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="tag-param.js.html">tag-param.js</a>, <a href="tag-param.js.html#line1">line 1</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-        
-    
-    </div>
-
-    
-
-    
-
-    
-
-     
-
-    
-
-    
-
-    
-
-    
-
-    
-</article>
-
-</section>
-
-
-
-
-
-
-
-<section>
-
-<header>
-    
-        <h2>
-        tag-property.js
-        </h2>
-        
-    
-</header>
-
-<article>
-    <div class="container-overview">
-    
-        
-            <div class="description">示例@property</div>
-        
-
-        
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="tag-property.js.html">tag-property.js</a>, <a href="tag-property.js.html#line1">line 1</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-        
-    
-    </div>
-
-    
-
-    
-
-    
-
-     
-
-    
-
-    
-
-    
-
-    
-
-    
-</article>
-
-</section>
-
-
-
-
-
-
-
-<section>
-
-<header>
-    
-        <h2>
-        tag-public_private_protected.js
-        </h2>
-        
-    
-</header>
-
-<article>
-    <div class="container-overview">
-    
-        
-            <div class="description">示例@public、@private、@protected</div>
-        
-
-        
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="tag-public_private_protected.js.html">tag-public_private_protected.js</a>, <a href="tag-public_private_protected.js.html#line1">line 1</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-        
-    
-    </div>
-
-    
-
-    
-
-    
-
-     
-
-    
-
-    
-
-    
-
-    
-
-    
-</article>
-
-</section>
-
-
-
-
-
-
-
-<section>
-
-<header>
-    
-        <h2>
-        tag-readonly.js
-        </h2>
-        
-    
-</header>
-
-<article>
-    <div class="container-overview">
-    
-        
-            <div class="description">示例@readonly</div>
-        
-
-        
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="tag-readonly.js.html">tag-readonly.js</a>, <a href="tag-readonly.js.html#line1">line 1</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-        
-    
-    </div>
-
-    
-
-    
-
-    
-
-     
-
-    
-
-    
-
-    
-
-    
-
-    
-</article>
-
-</section>
-
-
-
-
-
-
-
-<section>
-
-<header>
-    
-        <h2>
-        tag-requires.js
-        </h2>
-        
-    
-</header>
-
-<article>
-    <div class="container-overview">
-    
-        
-            <div class="description">示例@requires</div>
-        
-
-        
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="tag-requires.js.html">tag-requires.js</a>, <a href="tag-requires.js.html#line1">line 1</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-        
-    
-    </div>
-
-    
-
-    
-        <h3 class="subsection-title">Requires</h3>
-
-        <ul>
-            <li><a href="module-tag-module.html">module:tag-module</a></li>
-        
-            <li><a href="module-tag-exports.html">module:tag-exports</a></li>
-        </ul>
-    
-
-    
-
-     
-
-    
-
-    
-
-    
-
-    
-
-    
-</article>
-
-</section>
-
-
-
-
-
-
-
-<section>
-
-<header>
-    
-        <h2>
-        tag-returns.js
-        </h2>
-        
-    
-</header>
-
-<article>
-    <div class="container-overview">
-    
-        
-            <div class="description">示例@returns</div>
-        
-
-        
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="tag-returns.js.html">tag-returns.js</a>, <a href="tag-returns.js.html#line1">line 1</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-        
-    
-    </div>
-
-    
-
-    
-
-    
-
-     
-
-    
-
-    
-
-    
-
-    
-
-    
-</article>
-
-</section>
-
-
-
-
-
-
-
-<section>
-
-<header>
-    
-        <h2>
-        tag-see_link.js
-        </h2>
-        
-    
-</header>
-
-<article>
-    <div class="container-overview">
-    
-        
-            <div class="description">示例@see、@link</div>
-        
-
-        
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="tag-see_link.js.html">tag-see_link.js</a>, <a href="tag-see_link.js.html#line1">line 1</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-        
-    
-    </div>
-
-    
-
-    
-
-    
-
-     
-
-    
-
-    
-
-    
-
-    
-
-    
-</article>
-
-</section>
-
-
-
-
-
-
-
-<section>
-
-<header>
-    
-        <h2>
-        tag-since.js
-        </h2>
-        
-    
-</header>
-
-<article>
-    <div class="container-overview">
-    
-        
-            <div class="description">示例@since</div>
-        
-
-        
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="tag-since.js.html">tag-since.js</a>, <a href="tag-since.js.html#line1">line 1</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-        
-    
-    </div>
-
-    
-
-    
-
-    
-
-     
-
-    
-
-    
-
-    
-
-    
-
-    
-</article>
-
-</section>
-
-
-
-
-
-
-
-<section>
-
-<header>
-    
-        <h2>
-        tag-this.js
-        </h2>
-        
-    
-</header>
-
-<article>
-    <div class="container-overview">
-    
-        
-            <div class="description">示例@this</div>
-        
-
-        
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="tag-this.js.html">tag-this.js</a>, <a href="tag-this.js.html#line1">line 1</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-        
-    
-    </div>
-
-    
-
-    
-
-    
-
-     
-
-    
-
-    
-
-    
-
-    
-
-    
-</article>
-
-</section>
-
-
-
-
-
-
-
-<section>
-
-<header>
-    
-        <h2>
-        tag-throw.js
-        </h2>
-        
-    
-</header>
-
-<article>
-    <div class="container-overview">
-    
-        
-            <div class="description">示例@throws</div>
-        
-
-        
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="tag-throw.js.html">tag-throw.js</a>, <a href="tag-throw.js.html#line1">line 1</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-        
-    
-    </div>
-
-    
-
-    
-
-    
-
-     
-
-    
-
-    
-
-    
-
-    
-
-    
-</article>
-
-</section>
-
-
-
-
-
-
-
-<section>
-
-<header>
-    
-        <h2>
-        tag-todo.js
-        </h2>
-        
-    
-</header>
-
-<article>
-    <div class="container-overview">
-    
-        
-            <div class="description">示例@todo</div>
-        
-
-        
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="tag-todo.js.html">tag-todo.js</a>, <a href="tag-todo.js.html#line1">line 1</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-        
-    
-    </div>
-
-    
-
-    
-
-    
-
-     
-
-    
-
-    
-
-    
-
-    
-
-    
-</article>
-
-</section>
-
-
-
-
-
-
-
-<section>
-
-<header>
-    
-        <h2>
-        tag-type.js
-        </h2>
-        
-    
-</header>
-
-<article>
-    <div class="container-overview">
-    
-        
-            <div class="description">示例@type</div>
-        
-
-        
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="tag-type.js.html">tag-type.js</a>, <a href="tag-type.js.html#line1">line 1</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-        
-    
-    </div>
-
-    
-
-    
-
-    
-
-     
-
-    
-
-    
-
-    
-
-    
-
-    
-</article>
-
-</section>
-
-
-
-
-
-
-
-<section>
-
-<header>
-    
-        <h2>
-        tag-typedef.js
-        </h2>
-        
-    
-</header>
-
-<article>
-    <div class="container-overview">
-    
-        
-            <div class="description">示例@typedef</div>
-        
-
-        
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="tag-typedef.js.html">tag-typedef.js</a>, <a href="tag-typedef.js.html#line1">line 1</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-        
-    
-    </div>
-
-    
-
-    
-
-    
-
-     
-
-    
-
-    
-
-    
-
-    
-
-    
-</article>
-
-</section>
-
-
-
-
-
-
-
-<section>
-
-<header>
-    
-        <h2>
-        tag-var.js
-        </h2>
-        
-    
-</header>
-
-<article>
-    <div class="container-overview">
-    
-        
-            <div class="description">示例@var</div>
-        
-
-        
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="tag-var.js.html">tag-var.js</a>, <a href="tag-var.js.html#line1">line 1</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-        
-    
-    </div>
-
-    
-
-    
-
-    
-
-     
-
-    
-
-    
-
-    
-
-    
-
-    
-</article>
-
-</section>
-
-
-
-
-
-
-
-<section>
-
-<header>
-    
-        <h2>
-        tag-version.js
-        </h2>
-        
-    
-</header>
-
-<article>
-    <div class="container-overview">
-    
-        
-            <div class="description">示例@version</div>
-        
-
-        
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="tag-version.js.html">tag-version.js</a>, <a href="tag-version.js.html#line1">line 1</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-        
-    
-    </div>
-
-    
-
-    
-
-    
-
-     
-
-    
-
-    
-
-    
-
-    
-
-    
-</article>
-
-</section>
-
-
-
-
-</div>
-
-<nav>
-    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-tag-exports.html">tag-exports</a></li><li><a href="module-tag-module.html">tag-module</a></li></ul><h3>Classes</h3><ul><li><a href="Class1.html">Class1</a></li><li><a href="Class2.html">Class2</a></li><li><a href="Class3.html">Class3</a></li><li><a href="Class4.html">Class4</a></li><li><a href="Class5.html">Class5</a></li><li><a href="Class6.html">Class6</a></li><li><a href="Class7.html">Class7</a></li><li><a href="Class8.html">Class8</a></li><li><a href="Class9.html">Class9</a></li></ul><h3>Namespaces</h3><ul><li><a href="NS3.html">NS3</a></li><li><a href="window.NS1.html">NS1</a></li><li><a href="window.NS2.html">NS2</a></li></ul><h3>Mixins</h3><ul><li><a href="var16.html">var16</a></li></ul><h3>Interfaces</h3><ul><li><a href="interface1.html">interface1</a></li></ul><h3>Global</h3><ul><li><a href="global.html#CONSTANT1">CONSTANT1</a></li><li><a href="global.html#CONSTANT2">CONSTANT2</a></li><li><a href="global.html#CONSTANT3">CONSTANT3</a></li><li><a href="global.html#func1">func1</a></li><li><a href="global.html#func2">func2</a></li><li><a href="global.html#func3">func3</a></li><li><a href="global.html#func4">func4</a></li><li><a href="global.html#func5">func5</a></li><li><a href="global.html#func6">func6</a></li><li><a href="global.html#func7">func7</a></li><li><a href="global.html#func8">func8</a></li><li><a href="global.html#func9">func9</a></li><li><a href="global.html#func10">func10</a></li><li><a href="global.html#func11">func11</a></li><li><a href="global.html#retcode">retcode</a></li><li><a href="global.html#var1">var1</a></li><li><a href="global.html#var2">var2</a></li><li><a href="global.html#var3">var3</a></li><li><a href="global.html#var4">var4</a></li><li><a href="global.html#var5">var5</a></li><li><a href="global.html#var6">var6</a></li><li><a href="global.html#var7">var7</a></li><li><a href="global.html#var8">var8</a></li><li><a href="global.html#var9">var9</a></li><li><a href="global.html#var10">var10</a></li><li><a href="global.html#var11">var11</a></li><li><a href="global.html#var12">var12</a></li><li><a href="global.html#var13">var13</a></li><li><a href="global.html#var14">var14</a></li><li><a href="global.html#var15">var15</a></li><li><a href="global.html#var17">var17</a></li><li><a href="global.html#var18">var18</a></li></ul>
-</nav>
-
-<br class="clear">
-
-<footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.0-beta1</a> on Fri Feb 06 2015 16:10:33 GMT+0800 (中国标准时间)
-</footer>
-
-<script> prettyPrint(); </script>
-<script src="scripts/linenumber.js"> </script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+    <script type="text/javascript">
+        hljs.configure({
+            languages: ['javascript'] 
+        })
+        hljs.initHighlightingOnLoad();
+    </script>
 </body>
 </html>
