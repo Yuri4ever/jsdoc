@@ -20,6 +20,8 @@
         }
         pre {
             line-height: 1.5;
+            white-space: pre-wrap;
+            word-break: break-all;
         }
         code {
             font-family: "PT Mono", Menlo, "Courier New", monospace;
@@ -87,6 +89,7 @@
             position: relative;
             display: table;
             width: 100%;
+            table-layout: fixed;
         }
         .content .lists li:after {
             display: block;
